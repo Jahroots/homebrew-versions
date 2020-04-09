@@ -32,7 +32,17 @@ class QtAT511 < Formula
     end
   end
 
+
+  # force "qt" in URL for bottle download
+  # https://github.com/Homebrew/brew/issues/6059
+  def name
+    "qt"
+  end
+
   bottle do
+    # force "bottles" subdir for download
+    # https://github.com/Homebrew/brew/issues/6059
+    root_url "https://homebrew.bintray.com/bottles"
     sha256 "84a1a758d7881f9a446fd76fe4360ce7c5508c48761a74032a361996df1f79ec" => :mojave
     sha256 "ad85f42e73648dc47c8c903e0045e6b8cf62c99888144c73893a0226f2a5b51e" => :high_sierra
     sha256 "cd58fa592235c48ae050861eb3fca82ecfe54ddf103e5962b2bf9621f815f640" => :sierra
