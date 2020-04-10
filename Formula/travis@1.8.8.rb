@@ -5,7 +5,14 @@ class TravisAT188 < Formula
   sha256 "468158ee2b46c67c1a002a237a9e04472b22e8f4926cb68b1ca49a1a0b2eaf3b"
   revision 3
 
+  # fix URL for bottle download
+  # https://github.com/Homebrew/brew/issues/6059
+  def name
+    "travis"
+  end
+
   bottle do
+    root_url "https://homebrew.bintray.com/bottles"
     cellar :any
     sha256 "71e0f841ca71e5a502175c6cc83f0d5c54385b6880e8796e0296edc15255d1e1" => :high_sierra
     sha256 "478031cb489b5839547ff8a365b8232aa1e3a153b3e4007e32f76fce54e55611" => :sierra
