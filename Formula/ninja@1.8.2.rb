@@ -5,7 +5,16 @@ class NinjaAT182 < Formula
   sha256 "86b8700c3d0880c2b44c2ff67ce42774aaf8c28cbf57725cb881569288c1c6f4"
   head "https://github.com/ninja-build/ninja.git"
 
+  # force "qt" in URL for bottle download
+  # https://github.com/Homebrew/brew/issues/6059
+  def name
+    "ninja"
+  end
+
   bottle do
+    # force "bottles" subdir for download
+    # https://github.com/Homebrew/brew/issues/6059
+    root_url "https://homebrew.bintray.com/bottles"
     cellar :any_skip_relocation
     sha256 "b40a7da5db26b6bb32537185bd79861cce13f723cc02ad503e8501b6fca2d6f4" => :mojave
     sha256 "eeba4fff08b3ed4b308250fb650f7d06630acd18465900ba0e27cecfe925a6cc" => :high_sierra
