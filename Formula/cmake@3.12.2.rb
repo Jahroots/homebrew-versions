@@ -1,4 +1,4 @@
-class Cmake < Formula
+class CmakeAT3122 < Formula
   desc "Cross-platform make"
   homepage "https://www.cmake.org/"
   url "https://cmake.org/files/v3.12/cmake-3.12.2.tar.gz"
@@ -31,7 +31,7 @@ class Cmake < Formula
   # CMake is built with Qt support and Qt is built with MySQL support as MySQL uses CMake.
   # For the GUI application please instead use `brew cask install cmake`.
 
-  needs :cxx11
+#   needs :cxx11
 
   def install
     ENV.cxx11 if MacOS.version < :mavericks

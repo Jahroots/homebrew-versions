@@ -1,4 +1,4 @@
-class Boost < Formula
+class BoostAT167 < Formula
   desc "Collection of portable C++ source libraries"
   homepage "https://www.boost.org/"
   revision 1
@@ -43,7 +43,7 @@ class Boost < Formula
 
   depends_on "icu4c" => :optional
 
-  needs :cxx11
+#   needs :cxx11
 
   def install
     # Force boost to compile with the desired compiler

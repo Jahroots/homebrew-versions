@@ -16,7 +16,7 @@ class CodesignRequirement < Requirement
   end
 end
 
-class Llvm < Formula
+class LlvmAT700 < Formula
   desc "Next-gen compiler infrastructure"
   homepage "https://llvm.org/"
 
