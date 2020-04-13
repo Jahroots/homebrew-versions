@@ -18,7 +18,16 @@ class Boost < Formula
     end
   end
 
+  # force "qt" in URL for bottle download
+  # https://github.com/Homebrew/brew/issues/6059
+  def name
+    "boost"
+  end
+
   bottle do
+    # force "bottles" subdir for download
+    # https://github.com/Homebrew/brew/issues/6059
+    root_url "https://homebrew.bintray.com/bottles"
     cellar :any
     sha256 "1c6d078f1f746d1a855d3aeff466a1cd27c483d311e679151f4c5841764c793a" => :mojave
     sha256 "265ab8beaa6fa26a7c305ef2e6aec8bd26ca1db105aca0aaca028f32c5245a90" => :high_sierra
