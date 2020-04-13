@@ -10,7 +10,16 @@ class ImagemagickAT70811 < Formula
   revision 2
   head "https://github.com/ImageMagick/ImageMagick.git"
 
+  # force "qt" in URL for bottle download
+  # https://github.com/Homebrew/brew/issues/6059
+  def name
+    "imagemagick"
+  end
+
   bottle do
+    # force "bottles" subdir for download
+    # https://github.com/Homebrew/brew/issues/6059
+    root_url "https://homebrew.bintray.com/bottles"
     sha256 "ac3a4c98e2d66029ec651b1a29f5a13011c05d6f089db34ae0acc22a08a03311" => :mojave
     sha256 "fd6d33cb8b0099d8c2eebc78fecd3a348b93309f4ff45dfa2a74f9058aaaeb36" => :high_sierra
     sha256 "373389213c553cfe33cbb65a411d994de9c19b79cd03ef5c66545bbb50ede175" => :sierra
