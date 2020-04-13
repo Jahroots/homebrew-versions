@@ -70,7 +70,17 @@ class Llvm < Formula
     end
   end
 
+  # force "qt" in URL for bottle download
+  # https://github.com/Homebrew/brew/issues/6059
+  def name
+    "llvm"
+  end
+
+
   bottle do
+    # force "bottles" subdir for download
+    # https://github.com/Homebrew/brew/issues/6059
+    root_url "https://homebrew.bintray.com/bottles"
     cellar :any
     rebuild 1
     sha256 "17a4de5a32411a11bc449fdf7cef73c1de6c9936085df73e840ad1dadfbe907b" => :mojave
