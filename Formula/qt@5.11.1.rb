@@ -15,15 +15,15 @@ class QtAT5111 < Formula
     "qt"
   end
 
-  bottle do
+  #bottle do
     # force "bottles" subdir for download
     # https://github.com/Homebrew/brew/issues/6059
-    root_url "https://homebrew.bintray.com/bottles"
-    sha256 "7c82a27936aa9bab5d1c87c93d57b7589307e9dddf886d79fc7e96a704f6f047" => :mojave
-    sha256 "6483de8b8724673a06e03abfc667286c5c660c74b93458f2f9b0cee11da91782" => :high_sierra
-    sha256 "16d4d034e3fb5561369a0cb5e9f17f14c223e3be8452f29480b129f90480aadb" => :sierra
-    sha256 "1ca417e240550c5387e7d19a5b000c3bc32fc7141063f6b8ce42275b00d10d4d" => :el_capitan
-  end
+  #  root_url "https://homebrew.bintray.com/bottles"
+  #  sha256 "7c82a27936aa9bab5d1c87c93d57b7589307e9dddf886d79fc7e96a704f6f047" => :mojave
+  #  sha256 "6483de8b8724673a06e03abfc667286c5c660c74b93458f2f9b0cee11da91782" => :high_sierra
+  #  sha256 "16d4d034e3fb5561369a0cb5e9f17f14c223e3be8452f29480b129f90480aadb" => :sierra
+  #  sha256 "1ca417e240550c5387e7d19a5b000c3bc32fc7141063f6b8ce42275b00d10d4d" => :el_capitan
+  #end
 
   keg_only "Qt 5 has CMake issues when linked"
 
